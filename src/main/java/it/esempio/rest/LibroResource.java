@@ -20,9 +20,9 @@ public class LibroResource {            // Servizio REST
     }
 
     @POST                               // Tramite le richieste POST si possono aggiungere nuovi libri
-    @Path("/{name}")
-    public String crea(@PathParam("name") String name){
-        service.salva(name);
-        return "Libro '" + name + "' salvato!";
+    @Path("/{titolo}")
+    public String crea(@PathParam("titolo") String titolo){
+        service.salva(titolo);
+        return "Libro '" + titolo + "' salvato!";
     }
 }
